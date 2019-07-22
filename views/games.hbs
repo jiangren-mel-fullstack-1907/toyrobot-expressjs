@@ -1,0 +1,11 @@
+<div id="game-map" class="game-map">
+    <div class="map-row">
+        {{#each cells}}
+        <div class="map-cell">{{icon}}</div>
+        {{/each}}
+    </div>
+</div>
+<form method="post" action="/games">
+    <input type="number" name="move" /><br />
+    <input type="submit" />
+</form>
