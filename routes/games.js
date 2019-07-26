@@ -30,6 +30,13 @@ router.post('/', function(req, res, next) {
   res.render('games', {cells: state.toCells()});
 });
 
+router.get('/api', function(req, res, next) {
+  res.json(state);
+});
 
+router.post('/api', function(req, res, next) {
+  Object.assign(state, req.body);
+  res.json(state);
+});
 
 module.exports = router;
